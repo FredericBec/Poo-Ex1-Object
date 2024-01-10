@@ -19,6 +19,13 @@ public class City {
 		this.residentNumber = residentNumber;
 		count++;		
 	}
+	
+
+	public City(String cityName, String country) {
+		this.cityName = cityName;
+		this.country = country;
+	}
+
 
 	public City(String cityName, int residentNumber) {
 		this.cityName = cityName;
@@ -64,9 +71,15 @@ public class City {
 		return count;
 	}
 
+	/*
 	@Override
 	public String toString() {
-		return "City [cityName=" + cityName + ", country=" + country + ", residentNumber=" + residentNumber + "]";
+		return "[cityName=" + cityName + ", country=" + country + (residentNumber != 0 ? ", residentNumber=" + residentNumber : "") + "]";
 	}
+	*/
 	
+	@Override
+	public String toString() {
+		return "Ville de naissance : " + cityName + ", " + country + (residentNumber != 0 ? ", population :" + residentNumber + " d'habitants" : "");
+	}
 }

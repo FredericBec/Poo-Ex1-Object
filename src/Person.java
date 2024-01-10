@@ -4,6 +4,7 @@ public class Person {
 	private String firstName;
 	private int age;
 	private String address;
+	Object BornCity;
 	
 	public Person(String name, String firstName, int age, String address) {
 		this.name = name;
@@ -11,6 +12,17 @@ public class Person {
 		this.age = age;
 		this.address = address;
 	}
+	
+
+	public Person(String name, String firstName, int age, String address, Object bornCity) {
+		super();
+		this.name = name;
+		this.firstName = firstName;
+		this.age = age;
+		this.address = address;
+		BornCity = bornCity;
+	}
+
 
 	public Person(String name, String firstName, int age) {
 		this.name = name;
@@ -57,11 +69,26 @@ public class Person {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", firstName=" + firstName + ", age=" + age + ", address=" + address + "]";
+	
+	public void display() {
+		System.out.println();
 	}
 	
-	
+	public String getBornCityCountry() {
+		if(BornCity instanceof City) {
+			return ((City) BornCity).getCountry();
+		}else {
+			return "";
+		}
+	}
+	/*
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", firstName=" + firstName + ", age=" + age + ", address=" + address + "]" + "BornCity " + BornCity + "]";
+	}
+	*/
+	@Override
+	public String toString() {
+		return  name + ", " + firstName + ", " + age + "ans, habitant à " + address + ", " + BornCity;
+	}
 }
