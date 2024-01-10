@@ -75,7 +75,9 @@ public class Person {
 	}
 	
 	public String getBornCityCountry() {
+		//Vérification que BornCity est bien un objet City
 		if(BornCity instanceof City) {
+			//retourne le pays et obligation de cast BornCity pour définir le type
 			return ((City) BornCity).getCountry();
 		}else {
 			return "";
