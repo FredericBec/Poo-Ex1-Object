@@ -17,7 +17,7 @@ public class TestCity {
 		System.out.println(tolede.cityName + ", " + tolede.country + ", " + tolede.residentNumber);
 		System.out.println();
 		System.out.println("-----------------------------------------------\n");
-		*/
+		 */
 		//modification de l'argument residentNumber à +20000 habitants de la ville Toulouse
 		/* sans setters
 		toulouse.residentNumber += 20_000;
@@ -28,9 +28,9 @@ public class TestCity {
 		int newResident = 20_000;
 		toulouse.setResidentNumber(toulouse.getResidentNumber() + newResident);
 		System.out.println(toulouse.getCityName() + ", " + toulouse.getCountry() + ", " + toulouse.getResidentNumber() + "\n");
-		//toulouse.residentNumber = -200; impossible avec les variables de City en private.
 		
 		System.out.println("-----------------------------------------------\n");
+		//toulouse.residentNumber = -200; impossible avec les variables de City en private.
 		toulouse.setResidentNumber(-200);
 		System.out.println(toulouse.getCityName() + ", " + toulouse.getCountry() + ", " + toulouse.getResidentNumber() + "\n");
 		
@@ -43,18 +43,24 @@ public class TestCity {
 		System.out.println("-----------------------------------------------\n");
 		//nouvelle ville avec seulement 2 paramètres
 		City tulle = new City("Tulle", 14_390);
-		System.out.println(tulle.getCityName() + ", " + tulle.getCountry() + ", " + tulle.getResidentNumber());
+		System.out.println("[ville : " + tulle.getCityName() + "] [pays : " + tulle.getCountry() 
+							+ "] [nombre d'habitant :" + tulle.getResidentNumber() + "]");
 		//Modification de l'attribut country par les accesseurs
 		tulle.setCountry("France");
-		System.out.println(tulle.getCityName() + ", " + tulle.getCountry() + ", " + tulle.getResidentNumber());
+		System.out.println("[ville : " + tulle.getCityName() + "] [pays : " + tulle.getCountry() 
+							+ "] [nombre d'habitant :" + tulle.getResidentNumber() + "]");
+		
+		System.out.println("\n-----------------------------------------------\n");
 		
 		//avec méthode display
 		boston.display();
 		papeete.display();
 		
-		System.out.println("-----------------------------------------------\n");
+		System.out.println("\n-----------------------------------------------\n");
 		
-		//On eessaie d'afficher un objet sans méthode et le système n'arrive pas à l'interprété
+		/*Sans méthode toString, On essaie d'afficher un objet et le système n'arrive pas à l'interprété
+		 * et affiche City@15db9742
+		 */
 		System.out.println(toulouse);
 		System.out.println(bordeaux);
 		//Décompte du nombre d'objet

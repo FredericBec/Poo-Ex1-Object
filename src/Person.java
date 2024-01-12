@@ -4,7 +4,7 @@ public class Person {
 	private String firstName;
 	private int age;
 	private String address;
-	Object BornCity;
+	Object bornCity;
 	
 	public Person(String name, String firstName, int age, String address) {
 		this.name = name;
@@ -20,7 +20,7 @@ public class Person {
 		this.firstName = firstName;
 		this.age = age;
 		this.address = address;
-		BornCity = bornCity;
+		this.bornCity = bornCity;
 	}
 
 
@@ -76,9 +76,9 @@ public class Person {
 	
 	public String getBornCityCountry() {
 		//Vérification que BornCity est bien un objet City
-		if(BornCity instanceof City) {
+		if(bornCity instanceof City) {
 			//retourne le pays et obligation de cast BornCity pour définir le type
-			return ((City) BornCity).getCountry();
+			return ((City) bornCity).getCountry();
 		}else {
 			return "";
 		}
@@ -91,6 +91,6 @@ public class Person {
 	*/
 	@Override
 	public String toString() {
-		return  name + ", " + firstName + ", " + age + "ans, habitant à " + address + ", " + BornCity;
+		return  name + ", " + firstName + ", " + age + " ans, habitant à " + address + ", " + bornCity;
 	}
 }

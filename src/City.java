@@ -14,9 +14,9 @@ public class City {
 	private static int count;
 	
 	public City(String cityName, String country, int residentNumber) {
-		this.cityName = cityName;
-		this.country = country;
-		this.residentNumber = residentNumber;
+		setCityName(cityName);
+		setCountry(country);
+		setResidentNumber(residentNumber);
 		count++;		
 	}
 	
@@ -55,7 +55,7 @@ public class City {
 
 	public void setResidentNumber(int residentNumber) {
 		if(residentNumber < 0) {
-			System.out.println("Le nombre d'habitants ne peut être négatif");
+			System.out.println("Le nombre d'habitants ne peut être inférieur à 0");
 		}else {			
 			this.residentNumber = residentNumber;
 		}
@@ -82,4 +82,5 @@ public class City {
 	public String toString() {
 		return "Ville de naissance : " + cityName + ", " + country + (residentNumber != 0 ? ", population :" + residentNumber + " d'habitants" : "");
 	}
+	
 }
