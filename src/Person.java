@@ -7,35 +7,35 @@ public class Person {
 	Object bornCity;
 	
 	public Person(String name, String firstName, int age, String address) {
-		this.name = name;
-		this.firstName = firstName;
-		this.age = age;
-		this.address = address;
+		setName(firstName);
+		setFirstName(firstName);
+		setAge(age);
+		setAddress(address);
 	}
 	
 
 	public Person(String name, String firstName, int age, String address, Object bornCity) {
 		super();
-		this.name = name;
-		this.firstName = firstName;
-		this.age = age;
-		this.address = address;
+		setName(firstName);
+		setFirstName(firstName);
+		setAge(age);
+		setAddress(address);
 		this.bornCity = bornCity;
 	}
 
 
 	public Person(String name, String firstName, int age) {
-		this.name = name;
-		this.firstName = firstName;
-		this.age = age;
-		this.address = "unknow";
+		setName(firstName);
+		setFirstName(firstName);
+		setAge(age);
+		setAddress("Unknown");
 	}
 	
 	public Person(String name, String firstName) {
-		this.name = name;
-		this.firstName = firstName;
-		this.age = 0;
-		this.address = "unknow";
+		setName(firstName);
+		setFirstName(firstName);
+		setAge(0);
+		setAddress("Unkown");
 	}
 
 	public String getName() {

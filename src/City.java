@@ -22,15 +22,15 @@ public class City {
 	
 
 	public City(String cityName, String country) {
-		this.cityName = cityName;
-		this.country = country;
+		setCityName(cityName);
+		setCountry(country);
 	}
 
 
 	public City(String cityName, int residentNumber) {
-		this.cityName = cityName;
-		this.country = "unknow";
-		this.residentNumber = residentNumber;
+		setCityName(cityName);
+		setCountry("Unknown");
+		setResidentNumber(residentNumber);
 	}
 
 	public String getCityName() {
